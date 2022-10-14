@@ -7,13 +7,20 @@
  */
 int main(void)
 {
-	char alp[52] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	int i;
+	int ch;
+	clrscr();
 
-	for (i = 0; i < 52; i++)
-	{
-		putchar(alp[52]);
-	}
-	putchar('\n');
+		printf(“Print all uppercase letters followed by all lowercase letters on the next line :\n”);
+	
+	/* print uppercase letters */
+	for (ch = 'A'; ch < 'Z'; ch++)
+		putchar(ch);
+		putchar ('\n') ;
+
+	/* print lowercase letters */
+	for (ch= ‘a’; ch<= ‘z’; ch++)
+		putchar(ch);
+		putchar (‘\n’) ;
+
 	return (0);
 }
