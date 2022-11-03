@@ -16,7 +16,6 @@ int _increasevar(int i, int n)
 	if (i * i > n)
 		return (-1);
 }
-
 /**
  * _sqrt_recursion - finds sqrt
  * @n: the number
