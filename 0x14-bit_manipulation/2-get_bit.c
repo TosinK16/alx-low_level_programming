@@ -3,24 +3,19 @@
 /**
  * get_bit - returns the value of a bit at a given
  * index.
- * @n: unsigned long int input.
- * Return: value of the bit.
+ * @n: string of 0 and 1 chars
+ * @index: index of the bit you want to get
+ * Return: value of the bit at index
  */
 
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int i;
-
-	if (n == 0 && index < 64)
-		return (0);
-
-	for (i = 0; i <= 63; n >>= 1, i++)
+	if (index > 64)
 	{
-		if (index == i)
-		{
-			return (n & 1);
-		}
+		return (-1);
 	}
-
-	return (-1);
+	else
+	{
+		return (n >> index & 1);
+	}
 }
